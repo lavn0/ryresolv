@@ -19,6 +19,12 @@ class TestYPath < Minitest::Test
         ["*", "place"],
         ["/", "place"] ]
     )
+    assert_path_segments( "//one/./two/../three",
+      [ ["/", "one", ".", "two", "..", "three"] ]
+    )
+    assert_path_segments( "/one/*/two//three",
+      [ ["one", "*", "two", "/", "three"] ]
+    )
   end
 
 end
