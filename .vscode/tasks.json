@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "RubyTest",
+      "type": "shell",
+      "command": "find test -name '*.test.rb' | xargs ruby",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
