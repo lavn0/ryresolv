@@ -56,25 +56,7 @@ class TestYResolv < Minitest::Test
     assert_equal(10, yaml.select("/Mappings/AWSRegionArch2AMI/*/HVM64").length)
     # assert_equal(20, yaml.select("/Mappings/AWSRegionArch2AMI/*/*/*").length)
 
-
     # assert_equal("HVM64", yaml.select("//*[.=HVM64]")[0])
   end
-
-  # def test_yaml_middle
-  #   yamlStr = File.read('test/resource/aws_lambda_template.yaml')
-  #   parser = Psych::Parser.new Psych::TreeBuilder.new
-  #   parser.parse(yamlStr)
-
-  #   puts "11: #{parser.handler.root.children[0].class}" # Document
-  #   puts "11: #{parser.handler.root.children[0].children[0].class}" # Mapping
-  #   puts "11: #{parser.handler.root.children[0].children[0].children[0].class}" # Mapping
-  #   puts "11: #{parser.handler.root.children[0].children[0].children[0].value}" # 'hoge' (root key)
-  #   puts "11: #{parser.handler.root.children[0].children[0].children[1].class}" # Mapping
-
-  #   yaml = parser.handler.root.children[0].children[0]
-  #   yaml.extend YRESOLVNODE
-  #   results = yaml.select("/hoge/fuga")
-  #   assert_equal("piyo", results[0])
-  # end
 
 end
