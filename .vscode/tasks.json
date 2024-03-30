@@ -4,7 +4,7 @@
     {
       "label": "RubyTest",
       "type": "shell",
-      "command": "find test -name '*.test.rb' | xargs ruby",
+      "command": "find test -name '*.test.rb' -exec ruby {} \\;",
       "group": {
         "kind": "build",
         "isDefault": true
