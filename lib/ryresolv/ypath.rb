@@ -7,8 +7,9 @@ warn "#{caller[0]}: YAML::YPath is deprecated" if $VERBOSE
 module Syck
 
     class YPath
-        attr_accessor :segments, :predicates, :flags
+        attr_accessor :fullpath, :segments, :predicates, :flags
         def initialize( str )
+            @fullpath = str
             @segments = []
             @predicates = []
             @flags = nil
